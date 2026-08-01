@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import NavbarFooter from "./Components/NavbarFooter";
 import HomeGauri from "./Components/Home-Gauri";
 import Team from "./Components/Teams-Vidyanshi/pages/Team";
-import Events from "./Components/Events-Mohit/EventPage";
+import EventPage from "./Components/Events-Mohit/EventPage";
 import Sponsors from "./Components/Sponsors/SponsorsPage";
 import AlumniPage from "./Components/Alumni/AlumniPage";
 import ProjectsPage from "./Components/Projects/ProjectsPage";
@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
 
           {/* 📅 EVENTS PAGE */}
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<EventPage />} />
 
           {/* 🤝 SPONSORS PAGE */}
           <Route path="/sponsors" element={<Sponsors />} />
