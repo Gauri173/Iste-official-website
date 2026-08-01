@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  /* 🎨 Colors — pitch-black theme matching istetiet.com */
+  --color-void: #000000;
+  --color-ink: #0D1524;
+  --color-surface: #0D1524;
+
+  --color-darkblue-400: #00B4D8;
+  --color-darkblue-500: #0B3D91;
+  --color-darkblue-600: #072A63;
+  --color-darkblue-700: #041C4A;
+  --color-darkblue-900: #02040A;
+
+  --color-neon-blue: #00F0FF;
+  --color-neon-dim: #00B4D8;
+
+  /* 🔤 Ultra-smooth typography stack */
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* ✨ Glow shadows */
+  --shadow-glow-darkblue: 0 0 35px rgba(11,61,145,0.3);
+  --shadow-glow-blue: 0 0 30px rgba(0,240,255,0.25);
+
+  /* 🖼️ Background images used by TeamSection's ambient backdrop */
+  --background-image-grid-lines: linear-gradient(rgba(0,240,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.08) 1px, transparent 1px);
+  --background-image-radial-fade: radial-gradient(circle at 50% 30%, rgba(11,61,145,0.28), transparent 60%);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply bg-black text-white font-sans antialiased;
+  background-color: #000000;
+  -webkit-font-smoothing: antialiased;
+  
+}img {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+::selection {
+  @apply bg-[#00F0FF]/20 text-white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040308;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#041C4A, #00F0FF);
+  border-radius: 8px;
+}
+
+/* Reusable design primitives */
+@layer components {
+  .glass-panel {
+    @apply bg-[#0D1524]/90 backdrop-blur-xl border border-white/10;
+  }
+
+  .glow-border {
+    @apply border border-[#0B3D91]/30 transition-colors duration-300;
+  }
+
+  .glow-border:hover,
+  .glow-border:focus-visible {
+    @apply border-[#00F0FF]/60;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.35em] text-[#00F0FF]/80;
+  }
+
+  /* 🎯 UNIFIED SMOOTH HEADINGS ACROSS ALL PAGES */
+  .page-heading {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 🎯 UNIFIED BUTTON STYLING MATCHING HOMEPAGE */
+  .btn-primary-glow {
+    font-family: var(--font-display);
+    padding: 0.65rem 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    color: #ffffff;
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    background-image: linear-gradient(90deg, #02040A, #0B3D91, #00F0FF);
+    background-size: 220% 100%;
+    background-position: left;
+    transition: background-position 0.6s ease-out, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.18);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  .btn-primary-glow:hover {
+    background-position: right;
+    box-shadow: 0 0 28px rgba(0, 240, 255, 0.6);
+  }
+
+  .btn-primary-glow:active {
+    transform: scale(0.96);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #00F0FF;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
