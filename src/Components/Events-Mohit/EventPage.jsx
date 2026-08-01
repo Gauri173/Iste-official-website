@@ -10,11 +10,11 @@ import o3 from "../../assets/Events/Orientation/o-3.jpg";
 import o4 from "../../assets/Events/Orientation/o-4.jpg";
 import o5 from "../../assets/Events/Orientation/o-5.jpg";
 /* ─── Tech Unplugged ─── */
-import t1 from "../../assets/Events/Tech Unplugged/t-1.jpg";
-import t2 from "../../assets/Events/Tech Unplugged/t-2.jpg";
-import t3 from "../../assets/Events/Tech Unplugged/t-3.jpg";
-import t4 from "../../assets/Events/Tech Unplugged/t-4.jpg";
-import t5 from "../../assets/Events/Tech Unplugged/t-5.jpg";
+import t1 from "../../assets/Events/TechUnplugged/t-1.jpg";
+import t2 from "../../assets/Events/TechUnplugged/t-2.jpg";
+import t3 from "../../assets/Events/TechUnplugged/t-3.jpg";
+import t4 from "../../assets/Events/TechUnplugged/t-4.jpg";
+import t5 from "../../assets/Events/TechUnplugged/t-5.jpg";
 /* ─── Colloquium ─── */
 import c1 from "../../assets/Events/Colloquium/c-1.jpg";
 import c2 from "../../assets/Events/Colloquium/c-2.jpg";
